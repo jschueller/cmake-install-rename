@@ -18,7 +18,7 @@ file (WRITE ${CMAKE_CURRENT_BINARY_DIR}/bar/installed-OTconfig.h "// hello")
 
 set (OPENTURNS_INCLUDE_PATH include)
 
-install (DIRECTORY bar DESTINATION ${OPENTURNS_INCLUDE_PATH})
+# install (DIRECTORY bar DESTINATION ${OPENTURNS_INCLUDE_PATH})
 install (FILES ${CMAKE_CURRENT_BINARY_DIR}/bar/installed-OTconfig.h
           DESTINATION ${OPENTURNS_INCLUDE_PATH}/bar
           RENAME OTconfig.h
