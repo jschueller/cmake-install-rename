@@ -16,10 +16,10 @@ install (TARGETS hello DESTINATION bin)
 file (MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/bar)
 file (WRITE ${CMAKE_CURRENT_BINARY_DIR}/bar/installed-OTconfig.h "// hello")
 
-set (OPENTURNS_INCLUDE_PATH include)
+set (BAR_INCLUDE_PATH include)
 
-# install (DIRECTORY bar DESTINATION ${OPENTURNS_INCLUDE_PATH})
+install (DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bar DESTINATION ${BAR_INCLUDE_PATH})
 install (FILES ${CMAKE_CURRENT_BINARY_DIR}/bar/installed-OTconfig.h
-          DESTINATION ${OPENTURNS_INCLUDE_PATH}/bar
+          DESTINATION ${BAR_INCLUDE_PATH}/bar
           RENAME OTconfig.h
        )
